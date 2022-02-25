@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 
-std::string lower(int side)
+std::string upper(int side)
 {
   char arr[side];
 
@@ -10,11 +10,13 @@ for (int x = 0; x < side; x++)
   arr[x] = '*';
 }
 
-
+std::string spaces = "";
 
 for (int i = side; i >= 1; i--)
   {
     int point = 0;
+    std::cout << spaces;
+    spaces += " ";
     while (point <= i)
     {
       std::cout << arr[i];
@@ -22,12 +24,5 @@ for (int i = side; i >= 1; i--)
     }
     std::cout << "\n";
   }
-  std::cout << arr[0] << "\n";
-}
-
-int main()
-{
-  std::cout << lower(6);
-
-  return 0;
+  std::cout << spaces << arr[0] << "\n";
 }

@@ -23,10 +23,3 @@ for (int i = 1; i < side; i++)
     std::cout << "\n";
   }
 }
-
-int main()
-{
-  std::cout << lower(8);
-
-  return 0;
-}

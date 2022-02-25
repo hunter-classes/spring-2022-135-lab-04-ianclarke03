@@ -1,33 +1,34 @@
 #include <iostream>
 #include <string>
 
-
-std::string trapezoid (int width, int height)
+std::string trapezoid( int width, int height)
 {
-std::string stars[width];
-std::string spaces = "";
+  int spaces = 0;
+  int stars = width;
+  std::string trap = "";
+ 
 
-for (int x = 0; x < width; x++)
-{
-  stars[x] = "*";
-  }
-
-int line = 1;
-
-while (line <= height)
-  {
-    std::cout << spaces << stars << "\n";
-    stars = stars - "**";
-    spaces = spaces + ' ';
-    line++;
-  }
+  for (int h = 0; h < height; h++)
+    {
+      for (int a = 0; a < spaces; a++)
+        {
+          trap += " ";
+        }
+      for (int b = 0; b < stars; b++)
+        {
+          trap += "*";
+        }
+      for (int c = 0; c < spaces; c++)
+        {
+          trap += " ";
+        }
+      if(width - h * 2 <= 0)
+        {
+      return "Impossible shape!\n";
+        }
+      spaces += 1;
+      stars -= 2;
+      trap += "\n";
+    }
+  return trap;
 }
-
-
-int main ()
-{
-  std::cout << trapezoid (12, 5);
-  
-  return 0;
-}
-

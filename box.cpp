@@ -2,7 +2,7 @@
 #include <string>
 
 
-std::string box (int width, int height)
+std::string box(int width, int height)
 {
   for (int h = 0; h < height; h++)
 {
@@ -12,11 +12,4 @@ std::string box (int width, int height)
   }
   std::cout << "\n";
 }
-}
-
-int main()
-{
-  std::cout << box (7,4) << std::endl;
-
-  return 0;
 }
